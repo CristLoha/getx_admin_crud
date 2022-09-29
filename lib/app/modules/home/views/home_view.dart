@@ -41,7 +41,7 @@ class HomeView extends GetView<HomeController> {
                                     MaterialStateProperty.all(Colors.red),
                               ),
                               onPressed: () {
-                                controller.isActive.toggle();
+                                controller.isApproved.toggle();
                                 EasyLoading.show();
                                 controller.updateData(
                                   data: {
