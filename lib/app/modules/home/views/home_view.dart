@@ -17,10 +17,10 @@ class HomeView extends GetView<HomeController> {
         title: const Text('Data Pemohon'),
         centerTitle: true,
       ),
-      body: FutureBuilder<QuerySnapshot<Object?>>(
-        future: controller.getData(),
+      body: StreamBuilder<QuerySnapshot<Object?>>(
+        stream: controller.streamData(),
         builder: (context, snap) {
-          if (snap.connectionState == ConnectionState.done) {
+          if (snap.connectionState == ConnectionState.active) {
             var listAllDocs = snap.data!.docs;
 
             return ListView.builder(
