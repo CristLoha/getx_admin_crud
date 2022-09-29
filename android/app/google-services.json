@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "160587465209",
+    "project_id": "crudfirebase-6e553",
+    "storage_bucket": "crudfirebase-6e553.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160587465209:android:23128d04f7b0805d25bd28",
+        "android_client_info": {
+          "package_name": "com.christloha.flutter_firebase_crud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "160587465209-pkfbokfm3s2ut5v3cmr550cg795kn0br.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKyI8_anL6KqsI2Lhcn0NlufJhmRbMII0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "160587465209-pkfbokfm3s2ut5v3cmr550cg795kn0br.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "160587465209-c9iabc7im9qhqft7k0vo295jqes924n5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.christloha.flutterFirebaseCrud"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160587465209:android:1d9e9da0b6e09bef25bd28",
+        "android_client_info": {
+          "package_name": "com.example.getx_admin_crud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "160587465209-pkfbokfm3s2ut5v3cmr550cg795kn0br.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKyI8_anL6KqsI2Lhcn0NlufJhmRbMII0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "160587465209-pkfbokfm3s2ut5v3cmr550cg795kn0br.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "160587465209-c9iabc7im9qhqft7k0vo295jqes924n5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.christloha.flutterFirebaseCrud"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
