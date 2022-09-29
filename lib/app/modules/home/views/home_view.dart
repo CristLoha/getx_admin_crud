@@ -28,53 +28,49 @@ class HomeView extends GetView<HomeController> {
                 itemBuilder: (context, index) {
                   UserD userD = UserD.fromJson(
                       snap.data!.docs[index].data() as Map<String, dynamic>);
-                  return Obx(
-                    () => ListTile(
-                      title: Text(
-                          "${(listAllDocs[index].data() as Map<String, dynamic>)["name"]}"),
-                      subtitle: Text(
-                          "${(listAllDocs[index].data() as Map<String, dynamic>)["email"]}"),
-                      trailing: userD.approved == controller.isApproved.isTrue
-                          ? ElevatedButton(
-                              style: ButtonStyle(
-                                backgroundColor:
-                                    MaterialStateProperty.all(Colors.red),
-                              ),
-                              onPressed: () {
-                                controller.isApproved.toggle();
-                                EasyLoading.show();
-                                controller.updateData(
-                                  data: {
-                                    'approved': false,
-                                  },
-                                  docName: userD.id,
-                                  reference: controller.users,
-                                ).then(
-                                  (value) => EasyLoading.dismiss(),
-                                );
-                              },
-                              child: const Text('Reject'),
-                            )
-                          : ElevatedButton(
-                              style: ButtonStyle(
-                                backgroundColor:
-                                    MaterialStateProperty.all(Colors.blue),
-                              ),
-                              onPressed: () {
-                                EasyLoading.show();
-                                controller.isApproved.toggle();
-                                controller.updateData(
-                                  data: {
-                                    'approved': true,
-                                  },
-                                  docName: userD.id,
-                                  reference: controller.users,
-                                ).then(
-                                  (value) => EasyLoading.dismiss(),
-                                );
-                              },
-                              child: const Text('Approved')),
-                    ),
+                  return ListTile(
+                    title: Text(
+                        "${(listAllDocs[index].data() as Map<String, dynamic>)["name"]}"),
+                    subtitle: Text(
+                        "${(listAllDocs[index].data() as Map<String, dynamic>)["email"]}"),
+                    trailing: userD.approved == true
+                        ? ElevatedButton(
+                            style: ButtonStyle(
+                              backgroundColor:
+                                  MaterialStateProperty.all(Colors.red),
+                            ),
+                            onPressed: () {
+                              EasyLoading.show();
+                              controller.updateData(
+                                data: {
+                                  'approved': false,
+                                },
+                                docName: userD.id,
+                                reference: controller.users,
+                              ).then(
+                                (value) => EasyLoading.dismiss(),
+                              );
+                            },
+                            child: const Text('Reject'),
+                          )
+                        : ElevatedButton(
+                            style: ButtonStyle(
+                              backgroundColor:
+                                  MaterialStateProperty.all(Colors.blue),
+                            ),
+                            onPressed: () {
+                              EasyLoading.show();
+                              controller.updateData(
+                                data: {
+                                  'approved': true,
+                                },
+                                docName: userD.id,
+                                reference: controller.users,
+                              ).then(
+                                (value) => EasyLoading.dismiss(),
+                              );
+                            },
+                            child: const Text('Approved')),
                   );
                 });
           }

@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:getx_admin_crud/app/models/users.dart';
 
 class HomeController extends GetxController {
-  RxBool isApproved = true.obs;
   UserD userD = UserD();
   FirebaseFirestore firestore = FirebaseFirestore.instance;
   CollectionReference users = FirebaseFirestore.instance.collection('users');
