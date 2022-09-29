@@ -4,8 +4,6 @@ import 'package:getx_admin_crud/app/models/users.dart';
 
 class HomeController extends GetxController {
   RxBool isApproved = true.obs;
-  RxBool isActive = false.obs;
-  RxBool isUnprov = false.obs;
   UserD userD = UserD();
   FirebaseFirestore firestore = FirebaseFirestore.instance;
   CollectionReference users = FirebaseFirestore.instance.collection('users');
