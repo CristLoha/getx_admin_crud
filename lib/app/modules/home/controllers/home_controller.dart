@@ -10,10 +10,6 @@ class HomeController extends GetxController {
   FirebaseFirestore firestore = FirebaseFirestore.instance;
   CollectionReference users = FirebaseFirestore.instance.collection('users');
 
-  void approve() {
-    update();
-  }
-
   Future<void> updateData(
       {CollectionReference? reference,
       Map<String, dynamic>? data,
