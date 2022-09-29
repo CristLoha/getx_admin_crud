@@ -16,7 +16,6 @@ class HomeController extends GetxController {
   }
 
   Future<QuerySnapshot<Object?>> getData() async {
-    CollectionReference users = firestore.collection('users');
     return users.get();
   }
 
